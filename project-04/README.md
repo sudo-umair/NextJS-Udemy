@@ -1,5 +1,3 @@
-## Screenshots
-
 ```
 This project is same as the 'project02' but developed with following pre-rendering techniques.
 
@@ -11,6 +9,8 @@ This project is same as the 'project02' but developed with following pre-renderi
 
 4. Client-side Rendering (CSR)
 ```
+
+## Screenshots
 
 ![Alt text](./screenshots/Screenshot_20230325_233643.png 'Homepage')
 ![Alt text](./screenshots/Screenshot_20230325_233648.png 'Search Events')
