@@ -1,3 +1,14 @@
+## Concepts used/learnt in this module
+
+```
+1. Page routes in Next.js
+2. Structuring the routes
+3. Dynamic routes
+4. Catch-all routes
+5. Using the useRouter hook
+6. Getting Slugs and IDs from the URL
+```
+
 ## Screenshots
 
 ![Alt text](./screenshots/Screenshot_20230325_233643.png 'Homepage')
