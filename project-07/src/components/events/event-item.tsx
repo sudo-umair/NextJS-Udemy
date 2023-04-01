@@ -8,7 +8,7 @@ import classes from './event-item.module.css';
 import { IEventItemProps } from '@/common/types';
 
 function EventItem(props: IEventItemProps) {
-  const { key, title, image, date, location, id } = props;
+  const { title, image, date, location, id } = props;
 
   const humanReadableDate = new Date(date).toLocaleDateString('en-US', {
     day: 'numeric',
@@ -20,7 +20,7 @@ function EventItem(props: IEventItemProps) {
   const exploreLink = `/events/${id}`;
 
   return (
-    <li key={key} className={classes.item}>
+    <li key={id} className={classes.item}>
       <Image src={'/' + image} alt={title} width={250} height={160} />
       <div className={classes.content}>
         <div className={classes.summary}>

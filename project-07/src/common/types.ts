@@ -14,9 +14,7 @@ export interface IEventListProps {
   items: IEvent[];
 }
 
-export interface IEventItemProps extends IEvent {
-  key: string;
-}
+export interface IEventItemProps extends IEvent {}
 
 export interface IEventContentProps {
   children: ReactNode;
