@@ -85,7 +85,11 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 
     client.close();
 
-    res.status(200).json({ comments: comments });
+    const filteredComments = comments.filter(
+      (comment) => comment.eventId === eventId
+    );
+
+    res.status(200).json({ comments: filteredComments });
   }
 }
 
