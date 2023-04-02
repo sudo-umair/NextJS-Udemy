@@ -1,0 +1,66 @@
+import React from 'react';
+import classes from './post-content.module.css';
+import PostHeader from './post-header';
+import { IPostContentProps } from '@/common/types.components';
+import ReactMarkdown from 'react-markdown';
+import Image from 'next/image';
+import atomDark from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+
+export default function PostContent(props: IPostContentProps) {
+  const { post } = props;
+
+  const imagePath = `/images/posts/${post.slug}/${post.image}`;
+  console.log('imagePath', imagePath);
+
+  const customRenderers = {
+    // img(image) {
+    //   return (
+    //     <Image
+    //       src={`/images/posts/${post.slug}/${image.src}`}
+    //       alt={image.alt}
+    //       width={600}
+    //       height={300}
+    //     />
+    //   );
+    // },
+    p: (paragraph: any) => {
+      const { node } = paragraph;
+
+      if (node.children[0].tagName === 'img') {
+        const image = node.children[0];
+
+        return (
+          <div className={classes.image}>
+            <Image
+              src={`/images/posts/${post.slug}/${image.properties.src}`}
+              alt={image.properties.alt}
+              width={600}
+              height={300}
+            />
+          </div>
+        );
+      }
+
+      return <p>{paragraph.children}</p>;
+    },
+
+    code(code: any) {
+      const { className, children } = code;
+      const language = className.split('-')[1];
+
+      return (
+        <SyntaxHighlighter style={atomDark} language={language}>
+          {children}
+        </SyntaxHighlighter>
+      );
+    },
+  };
+
+  return (
+    <article className={classes.content}>
+      <PostHeader title={post.title} image={imagePath} />
+      <ReactMarkdown components={customRenderers}>{post.content}</ReactMarkdown>
+    </article>
+  );
+}
