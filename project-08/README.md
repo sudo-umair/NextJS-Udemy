@@ -26,4 +26,4 @@ MONGODB_URI:string
 <img src="./screenshots/Screenshot_20230401_231521.png">
 <img src="./screenshots/Screenshot_20230401_231525.png">
 <img src="./screenshots/Screenshot_20230401_231542.png">
-<img src="./screenshots/Screenshot_20230401_231545.png">
+<img src="./screenshots/Screenshot_20230401_231546.png">
