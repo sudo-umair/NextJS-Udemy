@@ -1,11 +1,11 @@
-import { IPost, IPostData } from './types';
+import { IPostData } from './types';
 
 export interface IHomePageProps {
-  posts: IPost[];
+  posts: IPostData[];
 }
 
 export interface IAllPostsPageProps {
-  posts: IPost[];
+  posts: IPostData[];
 }
 
 export interface IPostDetailsPageProps {

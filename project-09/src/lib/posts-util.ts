@@ -25,7 +25,7 @@ export function getPostFiles(): string[] {
   return fs.readdirSync(postsDirectory);
 }
 
-export function getAllPosts(): IPost[] {
+export function getAllPosts(): IPostData[] {
   const postFiles = getPostFiles();
 
   const allPosts = postFiles.map((postFile) => {
@@ -37,7 +37,7 @@ export function getAllPosts(): IPost[] {
   return sortedPosts;
 }
 
-export function getFeaturedPosts(): IPost[] {
+export function getFeaturedPosts(): IPostData[] {
   const allPosts = getAllPosts();
 
   const featuredPosts = allPosts.filter((post) => post.isFeatured);

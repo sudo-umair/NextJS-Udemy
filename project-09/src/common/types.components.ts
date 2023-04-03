@@ -1,19 +1,19 @@
 import { INotification, IPost, IPostData } from './types';
 
 export interface IPostItemProps {
-  post: IPost;
+  post: IPostData;
 }
 
 export interface IPostGridProps {
-  posts: IPost[];
+  posts: IPostData[];
 }
 
 export interface IFeaturedPostsProps {
-  posts: IPost[];
+  posts: IPostData[];
 }
 
 export interface IAllPostsProps {
-  posts: IPost[];
+  posts: IPostData[];
 }
 
 export interface IPostHeaderProps {
