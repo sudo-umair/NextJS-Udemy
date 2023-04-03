@@ -28,6 +28,10 @@
 MONGODB_URI:string
 ```
 
+## Deployed on Vercel
+
+[Click Here](https://nextjs-udemy-blond.vercel.app/)
+
 ## Screenshots
 
 <img src="./screenshots/Screenshot_20230403_025316.png">
