@@ -17,6 +17,10 @@
 MONGODB_URI:string
 ```
 
+## Deployed on Vercel
+
+[Click Here](https://next-events-pied.vercel.app/)
+
 ## Screenshots
 
 <img src="./screenshots/Screenshot_20230401_231502.png">
