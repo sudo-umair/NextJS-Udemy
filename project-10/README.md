@@ -22,12 +22,6 @@
 20. Use PrismLight to render code blocks
 ```
 
-## Dotenv
-
-```
-MONGODB_URI:string
-```
-
 ## Deployed on Vercel
 
 [Click Here](https://nextjs-udemy-blond.vercel.app/)
