@@ -9,6 +9,7 @@ import Button from '../../components/ui/button';
 import ErrorAlert from '../../components/ui/error-alert';
 import type { IFilteredEventsPageProps } from '@/common/types.pages';
 import type { IEvent } from '@/common/types';
+import { CONFIG } from '@/config';
 
 function FilteredEventsPage(props: IFilteredEventsPageProps) {
   const [loadedEvents, setLoadedEvents] = useState<IEvent[]>();
@@ -16,9 +17,11 @@ function FilteredEventsPage(props: IFilteredEventsPageProps) {
 
   const filterData = router.query.slug;
 
-  const { data, error } = useSWR(
-    'https://nextjs-course-c81cc-default-rtdb.firebaseio.com/events.json'
+  const { data, error } = useSWR(CONFIG.firebaseURL, (url) =>
+    fetch(url).then((res) => res.json())
   );
+
+  console.log(data);
 
   useEffect(() => {
     if (data) {
@@ -30,7 +33,7 @@ function FilteredEventsPage(props: IFilteredEventsPageProps) {
           ...data[key],
         });
       }
-
+      console.log(events);
       setLoadedEvents(events);
     }
   }, [data]);

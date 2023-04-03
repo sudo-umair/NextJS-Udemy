@@ -1,9 +1,8 @@
 import type { IDateFilter } from '@/common/types';
+import { CONFIG } from '@/config';
 
 export async function getAllEvents() {
-  const response = await fetch(
-    'https://nextjs-nextevents-default-rtdb.firebaseio.com/events.json'
-  );
+  const response = await fetch(CONFIG.firebaseURL);
   const data = await response.json();
 
   const events = [];
