@@ -17,7 +17,7 @@ export const insertDocument = async (
   collection: string,
   document: any
 ) => {
-  const db = client.db(process.env.mongo_db);
+  const db = client.db(process.env.mongo_db_name);
   const result = await db.collection(collection).insertOne(document);
   return result;
 };
