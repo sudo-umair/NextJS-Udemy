@@ -1,6 +1,7 @@
 import { MongoClient, Sort } from 'mongodb';
 
 const connectionString = `mongodb+srv://${process.env.mongo_username}:${process.env.mongo_password}@${process.env.mongo_collection}.obtfiff.mongodb.net/?retryWrites=true&w=majority`;
+const dbName = process.env.mongo_db_name;
 
 export const connectToDatabase = async () => {
   try {
@@ -17,7 +18,7 @@ export const insertDocument = async (
   collection: string,
   document: any
 ) => {
-  const db = client.db(process.env.mongo_db);
+  const db = client.db(dbName);
   const result = await db.collection(collection).insertOne(document);
   return result;
 };
