@@ -10,8 +10,12 @@
 
 ## Deployed on Vercel
 
-[Click Here]()
+[Click Here](https://next-auth-henna.vercel.app/)
 
 ## Screenshots
 
-<img src="./screenshots/Screenshot_20230403_025316.png">
+<img src="./screenshots/Screenshot from 2023-04-10 22-15-54.png">
+<img src="./screenshots/Screenshot from 2023-04-10 22-16-08.png">
+<img src="./screenshots/Screenshot from 2023-04-10 22-16-29.png">
+<img src="./screenshots/Screenshot from 2023-04-10 22-16-41.png">
+<img src="./screenshots/Screenshot from 2023-04-10 22-16-59.png">
